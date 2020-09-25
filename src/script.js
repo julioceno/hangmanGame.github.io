@@ -19,7 +19,7 @@ function treatmentError(error) { // Validação de erro
     }
 }
 
-function victory(arrayWord, joinArrayWord, resp) {
+function victory(arrayWord, joinArrayWord) {
     let trueOrFalse 
     arrayWord.filter( (e, i) => {
         
