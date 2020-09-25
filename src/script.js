@@ -3,10 +3,13 @@ const wordPage = document.getElementById('word')
 const letterPage = document.getElementById('letter')
 const wordStatus = document.getElementById('wordStatus')
 const answer = document.getElementById('answer')
-let arrayWord
+let arrayWord = []
 let joinArrayWord = []
 
 function addWord() {
+    arrayWord = []
+    joinArrayWord = []
+    answer.innerHTML = ''
     arrayWord = (wordPage.value).split('')
 }
 
@@ -19,12 +22,13 @@ function treatmentError(error) { // Validação de erro
     }
 }
 
-function victory(arrayWord, joinArrayWord) {
-    let trueOrFalse 
-    arrayWord.filter( (e, i) => {
-        
-        if(e === joinArrayWord)
-    })
+function victory() {
+    const compare = (element, indice) => element === joinArrayWord[indice]
+    const hasWon = arrayWord.every(compare) 
+    
+    if(hasWon === true) {
+        pageMain.innerHTML = 'Ganhou'
+    }
 }
 
 function testLetter() {
@@ -42,8 +46,6 @@ function testLetter() {
         }
     })
 
-    victory(arrayWord, joinArrayWord)
-
     arrayWord.forEach( (e, i) => { // Se tiver algum espaço nas palvras que o user mandou eu vou setar esse espaço, no novo array
         if (e === ' ') {
             joinArrayWord[i] = ' '
@@ -51,6 +53,7 @@ function testLetter() {
     })
 
     if(!hit) treatmentError('error') // se o hit for false será chamada a callback de erro
+    victory() // Vai chamar a callback victory pra checar se o user já ganhou
 
     answer.innerHTML = `${hit? hit : mistake}<br><br>`
     answer.innerHTML += joinArrayWord.join('')
@@ -58,4 +61,3 @@ function testLetter() {
     letterPage.value = ''
     letterPage.focus()
 }
-
