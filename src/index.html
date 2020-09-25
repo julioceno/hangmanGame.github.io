@@ -3,14 +3,18 @@
 <head>
     
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da forca</title>
 </head>
 <body>
-    <p>Palavra <input type="text" id="word"> <input type="button" value="Adicionar palavra" onclick="addWord()"></p>
-    <p>letra <input type="text" id="letter"> <input type="button" value="Verificar Letra" onclick="testLetter()"></p>
-    <div id="answer">...</div>
+    
+    <section id="page-main">
+        <p>Palavra <input type="text" id="word"> <input type="button" value="Adicionar palavra" onclick="addWord()"></p>
+        <p>letra <input type="text" id="letter"> <input type="button" value="Verificar Letra" onclick="testLetter()"></p>
+        <b><div id="answer"></div> </b> 
+
+        <div id="wordStatus"></div>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
