@@ -100,7 +100,6 @@ function testLetter() {
             joinArrayWord[i] = '  '
         }
     })
-
     if(!hit) treatmentError('error') // se o hit for false será chamada a callback de erro.
     victory() // Vai chamar a callback victory pra checar se o user já ganhou.
 
