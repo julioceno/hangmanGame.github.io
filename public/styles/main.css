@@ -5,11 +5,18 @@
 }
 
 body {
-    background-color: #6a097d;
+    height: 100vh;
+    width: 100vw;
 }
 
-main {
+#page-landing {
+    height: 100%;
+    width: 100%;
+}
+
+#container {
     /* display: flex; */
     font-family: 'Josefin Sans', sans-serif;;
     font-size: 30px;
+
 }

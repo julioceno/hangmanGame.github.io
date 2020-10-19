@@ -1,55 +1,66 @@
-.gallows-structure {
+.gallows-container {
   display: flex;
+  justify-content: center;
 }
 
 .gallows {
-  height: 50vh;
+  /* height: 50vh; */
+  height: 400px;
 }
 
 .stickMan {
   position: relative;
-  right: 93.4vw;
-  top: 16vh;
+  right: 370px;
+  top: 130px;
 }
 
 .head {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 185px;
   margin-top: 25px;
 }
 
 .body {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
 .arm-left {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
 .arm-rigth {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
 .leg-left {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
 .leg-right {
   position: absolute;
-  height: 20vh;
+  height: 130px;
   margin-left: 184px;
   margin-top: 23px;
+}
+
+.traces {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.traces img{
+    height: 30px;
 }

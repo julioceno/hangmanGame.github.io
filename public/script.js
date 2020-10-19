@@ -121,3 +121,18 @@ function testLetter() {
     letterPage.value = ''
     letterPage.focus()
 }
+
+(function() {
+    const colors = {
+        0: '#b8de6f',1: '#388e3c', 2: '#1565c0',3: '#e53935',4: '#f67809',5: '#5e35b1',
+        6: '#fbc02d',7: '#d81b60',8: '#64dd17',9: '#00acc1',10: '#304ffe',11: '#9f6581',
+        12: '#24b6da',13: '#616161',14: '#ee6f57',15: '#ffa5a5',
+        
+        getColor() {
+            numberColor = Math.trunc(Math.random() * 15)
+            return [this[numberColor]]
+        }
+    }
+    document.body.style.background = colors.getColor()
+}
+)()
