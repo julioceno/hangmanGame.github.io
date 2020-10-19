@@ -1,0 +1,55 @@
+.gallows-structure {
+  display: flex;
+}
+
+.gallows {
+  height: 50vh;
+}
+
+.stickMan {
+  position: relative;
+  right: 93.4vw;
+  top: 16vh;
+}
+
+.head {
+  position: absolute;
+  height: 20vh;
+  margin-left: 185px;
+  margin-top: 25px;
+}
+
+.body {
+  position: absolute;
+  height: 20vh;
+  margin-left: 184px;
+  margin-top: 23px;
+}
+
+.arm-left {
+  position: absolute;
+  height: 20vh;
+  margin-left: 184px;
+  margin-top: 23px;
+}
+
+.arm-rigth {
+  position: absolute;
+  height: 20vh;
+  margin-left: 184px;
+  margin-top: 23px;
+}
+
+.leg-left {
+  position: absolute;
+  height: 20vh;
+  margin-left: 184px;
+  margin-top: 23px;
+}
+
+.leg-right {
+  position: absolute;
+  height: 20vh;
+  margin-left: 184px;
+  margin-top: 23px;
+}
