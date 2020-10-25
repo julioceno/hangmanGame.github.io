@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+
 }
 
 body {
@@ -9,14 +11,21 @@ body {
     width: 100vw;
 }
 
-#page-landing {
+/* #page-landing {
     height: 100%;
     width: 100%;
-}
+} */
 
 #container {
-    /* display: flex; */
-    font-family: 'Josefin Sans', sans-serif;;
-    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-size: 30px; */
+    /* width: 100%; */
+    
+}
 
+:root {
+    --color-input: #f1f6f9;
+    --color-black: #373a40;
+
+    font-size: 62.5%;
 }

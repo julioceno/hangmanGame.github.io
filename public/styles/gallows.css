@@ -8,59 +8,103 @@
   height: 400px;
 }
 
-.stickMan {
+#stickMan {
   position: relative;
   right: 370px;
   top: 130px;
 }
 
-.head {
+#head {
   position: absolute;
   height: 130px;
   margin-left: 185px;
   margin-top: 25px;
 }
 
-.body {
+#body {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-.arm-left {
+#arm-left {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-.arm-rigth {
+#arm-rigth {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-.leg-left {
+#leg-left {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-.leg-right {
+#leg-right {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-.traces {
-    text-align: center;
-    margin-bottom: 60px;
+  /* Animações */
+  @keyframes up{
+    from {
+        opacity: 0;
+        transform: translateY(-16);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.traces img{
-    height: 30px;
+.animate-up {
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
+}
+
+
+#head {
+animation-delay: 50ms;
+  }
+  
+  #body {
+    animation-delay: 100ms;
+
+  }
+  
+  #arm-left ,
+  #arm-rigth {
+    animation-delay: 150ms;
+  }
+  
+  #leg-left ,
+  #leg-right{
+    animation-delay: 200ms;
+  }
+
+
+/*Traços*/
+
+.trace-container  {
+  width: 100%;
+  margin: 0 0px;
+  margin: 0 8vw;
+}
+
+.trace-container .trace {
+  width: 20vw;
+  margin-bottom: 10px;
 }

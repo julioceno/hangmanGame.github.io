@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="/public/styles/main.css">
     <link rel="stylesheet" href="/public/styles/gallows.css">
+    <link rel="stylesheet" href="/public/styles/page-landing.css">
+
+
 
     <!--Fontes-->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -16,41 +19,50 @@
 <body>
 <div id="page-landing">
     <div id="container">
-        <main>
+       
             <section>
                 <div class="gallows-container">
 
-                    <div><img class="gallows" src="/public/images/gallows.png" alt="Forca"></div>  <!-- Criei essa div pois eu tive que colocar a gallows-container  com display flex pra a forca e o sitck ficarem emparelhados-->
-                    <div class="stickMan">
-                        <img class="head" src="/public/images/hangmangame-head.png" alt="Cabeça">
-                        <img class="body" src="/public/images/hangmangame-body.png" alt="Corpo">
-                        <img class="arm-left"  src="/public/images/hangmangame-arm-left.png" alt="braço esquerdo">
-                        <img class="arm-rigth"  src="/public/images/hangmangame-arm-right.png" alt="braço direito">
-                        <img class="leg-left"  src="/public/images/hangmangame-leg-left.png" alt="perna esquerda">
-                        <img class="leg-right"  src="/public/images/hangmangame-leg-right.png" alt="perna direita">
+                    <div><img class="gallows"  src="/public/images/stickman/gallows.png" alt="Forca"></div>  <!-- Criei essa div pois eu tive que colocar a gallows-container  com display flex pra a forca e o sitck ficarem emparelhados-->
+                    <div id="stickMan">
+                        <img id="head" class="animate-up" src="/public/images/stickman/hangmangame-head.png" alt="Cabeça">
+                        <img id="body" class="animate-up" src="/public/images/stickman/hangmangame-body.png" alt="Corpo">
+                        <img id="arm-left" class="animate-up" src="/public/images/stickman/hangmangame-arm-left.png" alt="braço esquerdo">
+                        <img id="arm-rigth" class="animate-up" src="/public/images/stickman/hangmangame-arm-right.png" alt="braço direito">
+                        <img id="leg-left" class="animate-up" src="/public/images/stickman/hangmangame-leg-left.png" alt="perna esquerda">
+                        <img id="leg-right" class="animate-up" src="/public/images/stickman/hangmangame-leg-right.png" alt="perna direita">
                         </div>
                     </div>
-<!-- 
-                    <div class="traces">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
-                        <img src="/public/images/gallows-trace.png" alt="">
+
+                    <div class="trace-container">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
+                        <img class="trace" src="/public/images/gallows-trace.png" alt="">
                     </div>
                 
+                </section>
 
-               -->
-        </main>
+                <section>
+
+                    <div class="adding-word">
+                            <input type="text" placeholder="Coloque a palavra"> 
+                            <input type="button">  
+                    </div>
+
+                    <button class="adding-word-alone"> Jogar sozinho</button>
+        
+                </section>
     </div>
 </div>
 </body>

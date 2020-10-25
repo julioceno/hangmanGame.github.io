@@ -1,0 +1,85 @@
+.adding-word {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.adding-word input[type="text"],
+.adding-word input[type="button"] {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 0.1rem;
+  background: var(--color-input);
+
+  font-size: 1.7rem;
+  text-align: center;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;;
+
+  
+  cursor: pointer;
+  
+  /* border: none; */
+  outline: none;
+}
+
+.adding-word input[type="text"]:focus {
+  border: 1px solid  var(--color-black);
+}   
+
+.adding-word input[type="button"] {
+    width: 4rem;
+    
+    border-left: 1px solid var(--color-black);
+    
+    background-image: url(/public/images/buttons/clickButton-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    transition: background 0.2s;
+}
+
+.adding-word input[type="button"]:hover {
+    background: var(--color-black);
+
+    background-image: url(/public/images/buttons/clickButton-white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* game alone*/
+
+.adding-word-alone {
+  margin: 50px auto 0 ;
+  
+  width: 19rem;
+  height: 3rem;
+  border-radius: 0.1rem;
+  /* border: 1px solid red; */
+  font-family: 'Josefin Sans', sans-serif;
+  
+
+  font-size: 2rem;
+  
+  background: var(--color-input);
+  color: #393e46;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+
+  
+  outline: none;
+}
+
+.adding-word-alone:hover {
+  background: var(--color-black);
+  color: var(--color-input);
+}
+
+.adding-word-alone:focus {
+  border: 1.4px solid var(--color-input);
+}
