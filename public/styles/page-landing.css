@@ -8,18 +8,14 @@
 .adding-word input[type="button"] {
   width: 15rem;
   height: 3rem;
-  border-radius: 0.1rem;
-  background: var(--color-input);
+  border-radius: 0.3rem 0 0 0.3rem;
+  background: var(--color-white);
 
   font-size: 1.7rem;
   text-align: center;
-  text-align: center;
   font-family: 'Josefin Sans', sans-serif;;
+  color: var(--color-black);
 
-  
-  cursor: pointer;
-  
-  /* border: none; */
   outline: none;
 }
 
@@ -29,6 +25,8 @@
 
 .adding-word input[type="button"] {
     width: 4rem;
+    border-radius: 0 0.3rem 0.3rem 0 ;
+    cursor: pointer;
     
     border-left: 1px solid var(--color-black);
     
@@ -56,15 +54,14 @@
   
   width: 19rem;
   height: 3rem;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
   /* border: 1px solid red; */
   font-family: 'Josefin Sans', sans-serif;
   
 
   font-size: 2rem;
   
-  background: var(--color-input);
-  color: #393e46;
+  background: var(--color-white);
 
   display: flex;
   align-items: center;
@@ -77,9 +74,65 @@
 
 .adding-word-alone:hover {
   background: var(--color-black);
-  color: var(--color-input);
+  color: var(--color-white);
 }
 
 .adding-word-alone:focus {
-  border: 1.4px solid var(--color-input);
+  border: 1.4px solid var(--color-white);
 }
+
+/* Content Letter */
+
+.adding-letter {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.adding-letter input[type="text"],
+.adding-letter input[type="button"] {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.3rem 0 0 0.3rem;
+  background: var(--color-white);
+
+  font-size: 1.7rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: var(--color-black);
+
+  outline: none;
+}
+
+.adding-letter input[type="text"]:focus {
+  border: 1px solid  var(--color-black);
+}  
+
+.adding-letter input[type="button"] {
+  width: 4rem;
+  cursor: pointer;
+  border-radius: 0 0.3rem 0.3rem 0;
+  
+
+  border-left: 1px solid var(--color-black);
+  
+  background-image: url(/public/images/buttons/clickButton-black.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  transition: background 0.2s;
+}
+
+.adding-letter input[type="button"]:hover {
+  background: var(--color-black);
+
+  background-image: url(/public/images/buttons/clickButton-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.adding-letter input[type="button"]:focus {
+  border: 1px solid  var(--color-white);
+}  

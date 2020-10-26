@@ -28,28 +28,28 @@
   margin-top: 23px;
 }
 
-#arm-left {
+#armLeft {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-#arm-rigth {
+#armRight {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-#leg-left {
+#legLeft {
   position: absolute;
   height: 130px;
   margin-left: 184px;
   margin-top: 23px;
 }
 
-#leg-right {
+#legRight {
   position: absolute;
   height: 130px;
   margin-left: 184px;
@@ -85,26 +85,33 @@ animation-delay: 50ms;
 
   }
   
-  #arm-left ,
-  #arm-rigth {
+  #armLeft ,
+  #armRight {
     animation-delay: 150ms;
   }
   
-  #leg-left ,
-  #leg-right{
+  #legLeft ,
+  #legRight{
     animation-delay: 200ms;
   }
 
 
-/*Traços*/
+/*Traces*/
 
-.trace-container  {
-  width: 100%;
-  margin: 0 0px;
-  margin: 0 8vw;
+.trace-container {
+  margin: 0 1rem;
 }
 
-.trace-container .trace {
-  width: 20vw;
-  margin-bottom: 10px;
+.trace-container p{
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 5rem;
+  display: inline-block;
 }
+
+.trace {
+  height: 2.5rem;
+  margin-top: 1.5rem;
+
+}
+
