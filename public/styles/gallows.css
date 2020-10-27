@@ -110,9 +110,24 @@ animation-delay: 50ms;
   margin-bottom: 2rem;
 }
 
-.letter-container .letter{
+.letter-container {
+  margin-left: 1rem;
+}
+
+.letter-container  .letter{
   color: var(--color-white);
   font-weight: 700;
   font-size: 5rem;
   display: inline-block;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 2rem;
+
+  border-bottom: 1rem solid var(--color-white) ;
+
+  position: relative;
+
+  top: 3rem;
+
 }

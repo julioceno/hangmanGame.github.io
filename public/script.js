@@ -8,6 +8,10 @@ const dissappearGameConfig = document.getElementById('dissappearGameConfig') //P
 const appearContentLetter = document.getElementById('appearContentLetter')
 appearContentLetter.style.display = "none" 
 
+
+let indicehaha = []
+let wordCorret = [];
+
 let arrayWord;
 function addWord() {
    
@@ -31,8 +35,6 @@ function addWord() {
     
     arrayWord = (wordPage.value).split("")
      const addingTraces = Array(arrayWord.length) // isso vai retornar um array com a mesma quantidade de letras que o usuário adicionou, mas as posições do array serão undefined
-     
-
 
      for (let i = 0 ; i < addingTraces.length ; i++) { // adicionando as imagens no novo array criado.
         if (addingTraces[i] === undefined) { 
@@ -41,10 +43,16 @@ function addWord() {
     }  
     
     traceContainer.innerHTML = addingTraces.join('')
+
+    arrayWord.forEach( (e, i) => {
+        wordCorret[i] = `<div class="letter">&nbsp</div>`
+    })
 }
 
-let wordCorret = [];
+
 function addLetter() {
+    
+    console.log(wordCorret)
 
     const letter = letterPage.value
     let hit;
@@ -64,10 +72,10 @@ function addLetter() {
         }
     })
 
-    const addLetterInIndiceCorrect = e =>  wordCorret[e] = `<div class="letter">${hit}</div>` // se o usuário colocar uma palavra que tenha letras iguais eu vou pegar os indíces dessa letra e vou ir adicionando a letra nesses indices
+    const addLetterInIndiceCorrect = e =>  wordCorret[e] = ` <div class="letter">${hit}</div>` // se o usuário colocar uma palavra que tenha letras iguais eu vou pegar os indíces dessa letra e vou ir adicionando a letra nesses indices
     hit? arrayIndice.forEach(addLetterInIndiceCorrect) : wordCorret // todos vinham concatenados com undefined e também quando se errava uma letra entrava o undfined no array. com esse algoritmo a letra só é adicionada se o hit for true
 
-    console.log(wordCorret)
+    // console.log(wordCorret)
     letterContainer.innerHTML = wordCorret.join('')
 
     letterPage.value = ''
