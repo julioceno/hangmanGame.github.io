@@ -72,9 +72,19 @@
             </div>
           </div>
 
-          <div class="trace-container" id="trace-container">
-            <!-- <img class="trace" src="/public/images/stickman/gallows-trace.png" alt="traço"> -->
-            <p>sss</p>
+          <div class="status-letter" id="status-letter">
+            <div class="trace-container" id="trace-container">
+              <!-- <div class="trace"></div>
+              <div class="trace"></div>
+              <div class="trace"></div> -->
+            </div>
+
+            <div class="letter-container" id="letter-container">
+              <div class="letter"></div>
+              <div class="letter"></div>
+              <div class="letter"></div>
+              <div class="letter"></div>
+            </div>
           </div>
         </section>
 
@@ -82,7 +92,7 @@
           <div id="dissappearGameConfig">
             <!--Resposável por da um display none nesses dados lá no script -->
             <div class="adding-word">
-              <input type="text" id="word" placeholder="Coloque a palavra" />
+              <input type="text" id="wordPage" placeholder="Coloque a palavra" />
               <input type="button" onclick="addWord()" />
             </div>
 
@@ -91,8 +101,8 @@
 
           <div id="appearContentLetter">
             <div class="adding-letter">
-              <input type="text" id="letter" placeholder="Letra" />
-              <input type="button" onclick="testLetter()"/>
+              <input type="text" id="letterPage" placeholder="Letra" />
+              <input type="button" onclick="addLetter()"/>
             </div>
           </div>
         </section>

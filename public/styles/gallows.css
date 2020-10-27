@@ -98,20 +98,22 @@ animation-delay: 50ms;
 
 /*Traces*/
 
-.trace-container {
+.status-letter {
   margin: 0 1rem;
 }
 
-.trace-container p{
+.trace-container .trace {
+  background-color: var(--color-white);
+  width: 4rem;
+  height: 1rem;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.letter-container .letter{
   color: var(--color-white);
   font-weight: 700;
   font-size: 5rem;
   display: inline-block;
 }
-
-.trace {
-  height: 2.5rem;
-  margin-top: 1.5rem;
-
-}
-
