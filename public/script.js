@@ -8,22 +8,22 @@ const dissappearGameConfig = document.getElementById('dissappearGameConfig') //P
 const appearContentLetter = document.getElementById('appearContentLetter')
 appearContentLetter.style.display = "none" 
 
+const head = document.getElementById('head') 
+const body = document.getElementById('body')
+const armLeft = document.getElementById('armLeft')
+const armRight = document.getElementById('armRight')
+const legLeft = document.getElementById('legLeft')
+const legRight = document.getElementById('legRight')
 
-let indicehaha = []
+
 let wordCorret = [];
-
 let arrayWord;
 function addWord() {
    
     dissappearGameConfig.style.display = "none"
     appearContentLetter.style.display = "block" 
 
-    const head = document.getElementById('head') 
-    const body = document.getElementById('body')
-    const armLeft = document.getElementById('armLeft')
-    const armRight = document.getElementById('armRight')
-    const legLeft = document.getElementById('legLeft')
-    const legRight = document.getElementById('legRight')
+  
 
     head.style.display = "none"
     body.style.display = "none" 
@@ -32,55 +32,43 @@ function addWord() {
     legLeft.style.display = "none"
     legRight.style.display = "none"
 
-    
     arrayWord = (wordPage.value).split("")
-     const addingTraces = Array(arrayWord.length) // isso vai retornar um array com a mesma quantidade de letras que o usuário adicionou, mas as posições do array serão undefined
 
-     for (let i = 0 ; i < addingTraces.length ; i++) { // adicionando as imagens no novo array criado.
-        if (addingTraces[i] === undefined) { 
-            addingTraces[i] = ' <div class="trace"></div> '
-        } 
-    }  
-    
-    traceContainer.innerHTML = addingTraces.join('')
-
-    arrayWord.forEach( (e, i) => {
+    arrayWord.forEach( (e, i) => { // isso é feito para que todos os espaços do array fiquem prenchidos, e na tela os espaços da letra fiquem com um border-bottom deixando assim os tracinhos
         wordCorret[i] = `<div class="letter">&nbsp</div>`
     })
+    addLetter() // função é chamada para os tracinhos aparecerem
 }
 
-
 function addLetter() {
-    
-    console.log(wordCorret)
 
     const letter = letterPage.value
     let hit;
-    let mistake;
-    let currentIndice
     let arrayIndice = []
 
     arrayWord.forEach( (e, i) => {
         if (letter.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g , '') === e.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g , '')) {     
-            hit = arrayWord[i]
-            currentIndice = i
+            hit = arrayWord[i]? arrayWord[i] : 'erro'
             arrayIndice.push(i)
-
-
-        } else {
-             mistake = `[ERRO] a letra ${letter}` 
         }
     })
+    if(letter && !hit) mistake() //  letter tem que está prenchido e o hit tem que ser falso pra a função mistkae ser chamada
 
-    const addLetterInIndiceCorrect = e =>  wordCorret[e] = ` <div class="letter">${hit}</div>` // se o usuário colocar uma palavra que tenha letras iguais eu vou pegar os indíces dessa letra e vou ir adicionando a letra nesses indices
-    hit? arrayIndice.forEach(addLetterInIndiceCorrect) : wordCorret // todos vinham concatenados com undefined e também quando se errava uma letra entrava o undfined no array. com esse algoritmo a letra só é adicionada se o hit for true
+    const addLetterInIndiceCorrect = e =>  wordCorret[e] = ` <div class="letter">${hit}</div>` // se o usuário colocar uma palavra que tenha letras iguais a função vai pegar os indíces dessa letra e vai ir adicionando a letra em todos os indíces necessários
+    if(hit) arrayIndice.forEach(addLetterInIndiceCorrect) // todos vinham concatenados com undefined e também quando se errava uma letra entrava o undfined no array. com esse algoritmo a letra só é adicionada se o hit for true. E a função que está dentro do forEach é resposável por adicionar todas as letras nos indíces e também  a letra não vai concatenada com undefined
 
-    // console.log(wordCorret)
     letterContainer.innerHTML = wordCorret.join('')
 
     letterPage.value = ''
     letterPage.focus()
 }
+
+function mistake() {
+    alert('errou')
+}
+
+
+
 
 (function() { // algoritmo que joga uma cor aleátoria para o body
     const colors = {
@@ -94,5 +82,4 @@ function addLetter() {
         }
     }
     document.body.style.background = colors.getColor()
-}
-)()
+})()

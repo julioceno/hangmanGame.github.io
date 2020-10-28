@@ -96,38 +96,21 @@ animation-delay: 50ms;
   }
 
 
-/*Traces*/
-.status-letter {
-  margin: 0 1rem;
-}
-
-.trace-container .trace {
-  background-color: var(--color-white);
-  width: 4rem;
-  height: 1rem;
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-}
-
+/*letters and traces*/
 .letter-container {
-  margin-left: 1rem;
+  margin: 3rem 0 3rem 2.5rem;
 }
 
 .letter-container  .letter{
-  color: var(--color-white);
+  display: inline-block;
+  
   font-weight: 700;
   font-size: 5rem;
-  display: inline-block;
-  margin-right: 3rem;
-  margin-bottom: 2rem;
   text-align: center;
-  width: 2rem;
-
-  border-bottom: 1rem solid var(--color-white) ;
-
-  position: relative;
-
-  top: 3rem;
-
+  color: var(--color-white);
+  
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  width: 5rem;
+  border-bottom: 1rem solid var(--color-white);
 }
