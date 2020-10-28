@@ -30,7 +30,7 @@
     
     border-left: 1px solid var(--color-black);
     
-    background-image: url(public/images/buttons/clickButton-black.png);
+    background-image: url(../images/buttons/clickButton-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -41,7 +41,7 @@
 .adding-word input[type="button"]:hover {
     background: var(--color-black);
 
-    background-image: url(public/images/buttons/clickButton-white.png);
+    background-image: url(../images/buttons/clickButton-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -116,7 +116,7 @@
 
   border-left: 1px solid var(--color-black);
   
-  background-image: url(/public/images/buttons/clickButton-black.png);
+  background-image: url(../images/buttons/clickButton-black.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -127,7 +127,7 @@
 .adding-letter input[type="button"]:hover {
   background: var(--color-black);
 
-  background-image: url(/public/images/buttons/clickButton-white.png);
+  background-image: url(../images/buttons/clickButton-white.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
