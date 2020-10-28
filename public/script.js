@@ -4,9 +4,7 @@ const statusLetter = document.getElementById('status-letter')
 const traceContainer = document.getElementById('trace-container')
 const letterContainer = document.getElementById('letter-container')
 
-const dissappearGameConfig = document.getElementById('dissappearGameConfig') //Pegando conteúdo que deve aparecer e desaparecer
-const appearContentLetter = document.getElementById('appearContentLetter')
-appearContentLetter.style.display = "none" 
+ 
 
 const head = document.getElementById('head') 
 const body = document.getElementById('body')
@@ -15,6 +13,9 @@ const armRight = document.getElementById('armRight')
 const legLeft = document.getElementById('legLeft')
 const legRight = document.getElementById('legRight')
 
+const dissappearGameConfig = document.getElementById('dissappearGameConfig') //Pegando conteúdo que deve aparecer e desaparecer
+const appearContentLetter = document.getElementById('appearContentLetter')
+appearContentLetter.style.display = "none"
 
 let wordCorret = [];
 let arrayWord;
@@ -48,7 +49,7 @@ function addLetter() {
 
     arrayWord.forEach( (e, i) => {
         if (letter.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g , '') === e.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g , '')) {     
-            hit = arrayWord[i]? arrayWord[i] : 'erro'
+            hit = arrayWord[i]
             arrayIndice.push(i)
         }
     })
@@ -63,9 +64,36 @@ function addLetter() {
     letterPage.focus()
 }
 
+const popUp = document.getElementById('pop-up-container')
+const error = []
 function mistake() {
-    alert('errou')
-}
+    error.push('erro')
+
+    console.log(error)
+    
+    switch(error.length) {
+        case 1: head.style.display = 'block' 
+        break;
+        case 2: body.style.display = 'block' 
+        break;
+        case 3: armLeft.style.display = 'block'
+        break;
+        case 4: armRight.style.display = 'block'
+        break;
+        case 5: legLeft.style.display = 'block' 
+        break;
+        case 6: legRight.style.display = 'block' 
+                appearContentLetter.style.display = 'none'
+                
+                popUp.style.display="block"
+        break;
+        }
+
+        if(error.length == 6) {
+            setTimeout( () => {
+            }, 2000)
+        }
+    }
 
 
 

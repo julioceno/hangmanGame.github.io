@@ -1,0 +1,42 @@
+
+
+.pop-up-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width:  100%;
+    
+
+    position: absolute;
+    z-index: 10;
+
+    display: none;
+}
+
+.pop-up {
+    background-color: #f2f4fb;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 1rem;
+    border: 1px solid #393e46 ;
+    
+
+    position: absolute;
+    margin: 30vh 25vw;
+}
+
+
+@keyframes appear{
+
+    from  {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-appear {
+    animation-name: appear;
+    animation-duration: 300ms;
+}
