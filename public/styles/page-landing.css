@@ -135,4 +135,5 @@
 
 .adding-letter input[type="button"]:focus {
   border: 1px solid  var(--color-white);
+  background-image: url(../images/buttons/clickButton-white.png);
 }  
