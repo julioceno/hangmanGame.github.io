@@ -86,12 +86,14 @@ function mistake() {
                 appearContentLetter.style.display = 'none'
                 
                 popUp.style.display="block"
-        break;
-        }
-
-        if(error.length == 6) {
+                break;
+            }
+            
+            if(error.length == 6) {
+                document.body.style.background = "#f05454"
+           
             setTimeout( () => {
-            }, 2000)
+            }, 3000)
         }
     }
 

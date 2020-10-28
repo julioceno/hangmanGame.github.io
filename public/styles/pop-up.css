@@ -10,6 +10,7 @@
     z-index: 10;
 
     display: none;
+
 }
 
 .pop-up {
@@ -18,12 +19,30 @@
     width: 20rem;
     border-radius: 1rem;
     border: 1px solid #393e46 ;
-    
+
 
     position: absolute;
     margin: 30vh 25vw;
+
+    font-size: 2.5rem;
+
+    
+
 }
 
+
+.pop-up p {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.pop-up button {
+    margin: 5rem 8rem;
+}
+
+.pop-up button img {
+    height: 3rem;
+}
 
 @keyframes appear{
 
