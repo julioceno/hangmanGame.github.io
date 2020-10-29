@@ -22,7 +22,10 @@ body, html {
 
 :root {
     --color-white: #f1f6f9;
+    --color-white-secondary:#f2f4fb;
     --color-black: #373a40;
+    --color-black-secondary: #393e46;
+    --color-green: #ccf6c8;
 
     font-size: 62.5%;
 }

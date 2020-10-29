@@ -84,8 +84,10 @@ function mistake() {
         break;
         case 6: legRight.style.display = 'block' 
                 appearContentLetter.style.display = 'none'
-                
                 popUp.style.display="block"
+                const wordCorretPopup = document.getElementById('word-corret-popup')
+                wordCorretPopup.innerHTML = arrayWord.join('')
+
                 break;
             }
             

@@ -14,11 +14,11 @@
 }
 
 .pop-up {
-    background-color: #f2f4fb;
+    background-color: var(--color-white-secondary);
     height: 20rem;
     width: 20rem;
     border-radius: 1rem;
-    border: 1px solid #393e46 ;
+    border: 1px solid var(--color-black-secondary) ;
 
 
     position: absolute;
@@ -33,12 +33,20 @@
 
 .pop-up p {
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 2.5rem;
+    color: var(--color-black);
+}
+
+.pop-up div {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--color-green);
+    font-weight: 700;
 }
 
 .pop-up button {
-    background-color: #f2f4fb;
-    margin: 5rem 8rem;
+    background-color: var(--color-white-secondary);
+    margin: 2rem 8rem;
 }
 
 .pop-up button img {
