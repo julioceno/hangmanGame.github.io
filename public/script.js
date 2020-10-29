@@ -17,14 +17,36 @@ const dissappearGameConfig = document.getElementById('dissappearGameConfig') //P
 const appearContentLetter = document.getElementById('appearContentLetter')
 appearContentLetter.style.display = "none"
 
+
+let wordRandomChosen; 
+function addWordAlone() {
+    const wordsRandoms= {
+        
+        0: 'Pavão',1: 'Arara',2: 'Zebra',3: 'Girafa ',4: 'Avestruz',5: 'Periquito', 6: 'Cobra',7: 'Búfalo',
+        8: 'Aranha',9: 'Pardal',10: 'Lula',11: 'Padeiro',12: 'Astronauta',13: 'Ator', 14: 'Maquinista',
+        15: 'Carpinteiro',16: 'Encanador',17: 'Faxineira',18: 'Engenheiro',19: 'Taxista',20: 'Vendedora',
+        21: 'Laranja',22: 'Branco',23: 'Roxo',24: 'Vermelho',25: 'Preto',26: 'Marrom',27: 'Rosa', 28: 'Branco',
+        29: 'Cinza',30: 'Verde',31: 'Biologia',32: 'Diploma',33: 'Pensamento',34: 'Arroz',35: 'Toalha', 36: 'Sorvete', 
+        37: 'Pera',38: 'Lupa',39: 'Tambor',40: 'Tomate',41: 'Rena',42: 'Pote',43: 'Rápido',44: 'Gelo',
+        45: 'Telefone',46: 'Cavalo',47: 'Montanha',48: 'Iogurte',49: 'Grande',50: 'Faca',
+         
+        getWordRandom() {
+            const numberWord = Math.trunc(Math.random() * 50)
+            return this[numberWord]
+        }
+    }
+
+    wordRandomChosen = wordsRandoms.getWordRandom()
+
+    addWord()
+}
+
 let wordCorret = [];
 let arrayWord;
 function addWord() {
    
     dissappearGameConfig.style.display = "none"
     appearContentLetter.style.display = "block" 
-
-  
 
     head.style.display = "none"
     body.style.display = "none" 
@@ -33,7 +55,7 @@ function addWord() {
     legLeft.style.display = "none"
     legRight.style.display = "none"
 
-    arrayWord = (wordPage.value).split("")
+    wordRandomChosen? arrayWord = wordRandomChosen.split("") : arrayWord = (wordPage.value).split("")
 
     arrayWord.forEach( (e, i) => { // isso é feito para que todos os espaços do array fiquem prenchidos, e na tela os espaços da letra fiquem com um border-bottom deixando assim os tracinhos
         wordCorret[i] = `<div class="letter">&nbsp</div>`
@@ -138,7 +160,7 @@ function victory() {
         24: '#fa26a0', 25: '#1b1b2f', 26: '#27496d', 27: '#035aa6', 28: '#323232', 29: '#414141',
         
         getColor() {
-            numberColor = Math.trunc(Math.random() * 15)
+            const numberColor = Math.trunc(Math.random() * 15)
             return [this[numberColor]]
         }
     }
