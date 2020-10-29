@@ -45,7 +45,7 @@ function addWordAlone() {
                 return this[numberWord]
             },
 
-            tip : "Profissao"
+            tip : "Profissão"
         },
        
         2: {
@@ -93,18 +93,6 @@ function addWordAlone() {
 
             tip : "Familia"
         },
-
-        6: {
-            0: 'Faxineira',  1: 'Encanador',   2: 'Advogada',   3: 'Padeiro',   4: 'Ator',   5: 'Cantor',   6: 'Engenheiro',  7: 'Enfermeira',  8: 'Arqueólogo',  9: 'Chef',  10: 'Youtuber', 
-
-            getWordRandom() {
-                const numberWord = Math.trunc(Math.random() * 10)
-                return this[numberWord]
-            },
-
-            tip : "Profissao"
-        },
-
       
          
         getClassWordRandom() {
@@ -256,4 +244,26 @@ function victory() {
         }
     }
     document.body.style.background = colors.getColor()
+
+
+    wordPage.addEventListener('keypress', e => {
+        if (e.key == ' ') {
+            e.preventDefault()
+        }
+    })
+    
+    letterPage.addEventListener('keypress', e => {
+        if (e.key == ' ') {
+            e.preventDefault()
+        }
+    })
+    
+    letterPage.addEventListener('keypress', e => {
+        const moreThanOneLetter = (letterPage.value).split("")
+
+        if (moreThanOneLetter.length > 0) {
+            e.preventDefault()
+        }
+    })
+    
 })()
