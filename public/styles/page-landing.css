@@ -81,7 +81,20 @@
   border: 1.4px solid var(--color-white);
 }
 
-/* Content Letter */
+/* Content Letter and word tip*/
+
+.wordTip {
+  text-align: center;
+  color: var(--color-white);
+  font-size: 2rem;
+
+  display: none;
+}
+
+.wordTip small {
+  color: var(--color-green-secondary);
+  font-weight: 700;
+}
 
 .adding-letter {
   display: flex;

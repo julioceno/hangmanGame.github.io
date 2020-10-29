@@ -1,10 +1,9 @@
 const wordPage = document.getElementById('wordPage')
+const wordTip = document.getElementById('wordTip')
 const letterPage = document.getElementById('letterPage')
-const statusLetter = document.getElementById('status-letter')
-const traceContainer = document.getElementById('trace-container')
 const letterContainer = document.getElementById('letter-container')
 
- 
+
 
 const head = document.getElementById('head') 
 const body = document.getElementById('body')
@@ -17,34 +16,122 @@ const dissappearGameConfig = document.getElementById('dissappearGameConfig') //P
 const appearContentLetter = document.getElementById('appearContentLetter')
 appearContentLetter.style.display = "none"
 
-
 let wordRandomChosen; 
+let tipRandomChosen
+
 function addWordAlone() {
+    const numberWord = Math.trunc(Math.random() * 6)
+   
     const wordsRandoms= {
-        
-        0: 'Pavão',1: 'Arara',2: 'Zebra',3: 'Girafa ',4: 'Avestruz',5: 'Periquito', 6: 'Cobra',7: 'Búfalo',
-        8: 'Aranha',9: 'Pardal',10: 'Lula',11: 'Padeiro',12: 'Astronauta',13: 'Ator', 14: 'Maquinista',
-        15: 'Carpinteiro',16: 'Encanador',17: 'Faxineira',18: 'Engenheiro',19: 'Taxista',20: 'Vendedora',
-        21: 'Laranja',22: 'Branco',23: 'Roxo',24: 'Vermelho',25: 'Preto',26: 'Marrom',27: 'Rosa', 28: 'Branco',
-        29: 'Cinza',30: 'Verde',31: 'Biologia',32: 'Diploma',33: 'Pensamento',34: 'Arroz',35: 'Toalha', 36: 'Sorvete', 
-        37: 'Pera',38: 'Lupa',39: 'Tambor',40: 'Tomate',41: 'Rena',42: 'Pote',43: 'Rápido',44: 'Gelo',
-        45: 'Telefone',46: 'Cavalo',47: 'Montanha',48: 'Iogurte',49: 'Grande',50: 'Faca',
+
+        0: {
+            0: 'Pavão',1: 'Arara',2: 'Zebra',3: 'Girafa ',4: 'Avestruz',5: 'Periquito', 6: 'Cobra',7: 'Búfalo',
+            8: 'Aranha',9: 'Pardal',10: 'Lula',
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 50)
+                return this[numberWord]
+            },
+
+            tip : "Animais"
+        },
+       
+        1: {
+            0: 'Padeiro',1: 'Astronauta',2: 'Ator', 3: 'Maquinista',
+            4: 'Carpinteiro',5: 'Encanador',6: 'Faxineira',7: 'Engenheiro',8: 'Taxista',9: 'Vendedora',
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Profissao"
+        },
+       
+        2: {
+            0: 'Branco',1: 'Roxo',2: 'Vermelho',3: 'Preto',4: 'Marrom',5: 'Rosa', 6: 'Branco',
+            7: 'Cinza',8: 'Verde',
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Cor"
+        },
+
+        3: {
+            0: 'Queijo',  1: 'Queijo',   2: 'Alcachofra',   3: 'Tamareira',   4: 'Leite',   5: 'Legumes',   6: 'Framboesa',  7: 'Caqui',  8: 'Amora',  9: 'Cogumelos', 
+            10: 'Ovo', 
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Alimentos"
+        },
+
+        4: {
+            0: 'Bonde',  1: 'Balsa',   2: 'Submarino',   3: 'Triciclo',   4: 'Caiaque',   5: 'Parapente',   6: 'Bicicleta',  7: 'Navio',  8: 'Ferrovia',  9: 'Carruagem',  10: 'Foguete', 
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Transporte"
+        },
+
+        5: {
+            0: 'Bisneta',  1: 'Tio',   2: 'Neta',   3: 'Pai',   4: 'Neto',   5: 'Esposa',   6: 'Pai',  7: 'Sobrinha',  8: 'Tia',  9: 'Bisneta',  10: 'Filha', 
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Familia"
+        },
+
+        6: {
+            0: 'Faxineira',  1: 'Encanador',   2: 'Advogada',   3: 'Padeiro',   4: 'Ator',   5: 'Cantor',   6: 'Engenheiro',  7: 'Enfermeira',  8: 'Arqueólogo',  9: 'Chef',  10: 'Youtuber', 
+
+            getWordRandom() {
+                const numberWord = Math.trunc(Math.random() * 10)
+                return this[numberWord]
+            },
+
+            tip : "Profissao"
+        },
+
+      
          
-        getWordRandom() {
-            const numberWord = Math.trunc(Math.random() * 50)
-            return this[numberWord]
+        getClassWordRandom() {
+            return this[numberWord].getWordRandom()
+        },
+
+        getTipRandom() {
+            return this[numberWord].tip
         }
+
+        
     }
-
-    wordRandomChosen = wordsRandoms.getWordRandom()
-
+    
+    wordRandomChosen = wordsRandoms.getClassWordRandom()
+    tipRandomChosen = wordsRandoms.getTipRandom()
+    
+    wordTip.style.display ="block"
+    wordTip.innerHTML = `Dica: <Small>${tipRandomChosen}</small>`
     addWord()
 }
 
 let wordCorret = [];
 let arrayWord;
 function addWord() {
-   
+
+    
+    
     dissappearGameConfig.style.display = "none"
     appearContentLetter.style.display = "block" 
 
@@ -60,8 +147,12 @@ function addWord() {
     arrayWord.forEach( (e, i) => { // isso é feito para que todos os espaços do array fiquem prenchidos, e na tela os espaços da letra fiquem com um border-bottom deixando assim os tracinhos
         wordCorret[i] = `<div class="letter">&nbsp</div>`
     })
+
+
     addLetter() // função é chamada para os tracinhos aparecerem
 }
+
+
 
 function addLetter() {
 
