@@ -251,13 +251,7 @@ function victory() {
             e.preventDefault()
         }
     })
-    
-    letterPage.addEventListener('keypress', e => {
-        if (e.key == ' ') {
-            e.preventDefault()
-        }
-    })
-    
+        
     letterPage.addEventListener('keypress', e => {
         const moreThanOneLetter = (letterPage.value).split("")
 
@@ -266,4 +260,11 @@ function victory() {
         }
     })
     
+    wordPage.addEventListener("keyup", e => {
+        if (e.keyCode === 13) addWord()
+    })
+    
+    letterPage.addEventListener('keyup', e => {
+        if (e.keyCode === 13) addLetter()
+    })
 })()
